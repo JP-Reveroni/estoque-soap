@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://estoque.local/ws/produtos"
+           xmlns:tns="https://estoque.local/ws/produtos"
+           elementFormDefault="qualified">
+
+    <xs:element name="consultarProdutoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codigo" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarProdutoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nome" type="xs:string"/>
+                <xs:element name="descricao" type="xs:string"/>
+                <xs:element name="marca" type="xs:string"/>
+                <xs:element name="quantidadeEstoque" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
